@@ -1,11 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react';
 import './home.css'
 
 export default function Home() {
+
+    const [theme, setTheme] = useState('light')
+    const toggleTheme = () => {
+        if (theme === 'light') {
+            setTheme('dark')
+        }
+        else {
+            setTheme('light')
+        }
+    };
+
+    useEffect(() => {
+        document.body.className = theme
+    }, [theme])
+
     return (
-        <div>
-            <div className="homeContainer">
+        <div >
+            <div className={`homeContainer`}>
+
+                <div className='themeContainer'>
+                    <input className="themeMode" type="checkbox" id="checkbox" onClick={toggleTheme} />
+                    <label for='checkbox' className="switch">
+                        <div className="powersign"></div>
+                    </label>
+                </div>
+
                 <section className="projectContainer">
                     <div className="project">
                         {/* TODO add img, add link, add design for box layout */}
@@ -45,12 +68,12 @@ export default function Home() {
                                 <a className="card__link" href="/calculator">
 
                                     <div className="card__icon">
-                                    <Icon className='Icon' icon="ion:timer-outline" color="white" width="50" height="50" />
+                                        <Icon className='Icon' icon="ion:timer-outline" color="white" width="50" height="50" />
                                     </div>
 
 
                                     <div className="card__media">
-                                    <Icon className='Icon' icon="ion:timer-outline" color="white" width="200" height="200" />
+                                        <Icon className='Icon' icon="ion:timer-outline" color="white" width="200" height="200" />
                                     </div>
 
 
@@ -74,12 +97,12 @@ export default function Home() {
                                 <a className="card__link" href="/calculator">
 
                                     <div className="card__icon">
-                                    <Icon className='Icon' icon="vscode-icons:file-type-todo" color="white" width="50" height="50" />
+                                        <Icon className='Icon' icon="vscode-icons:file-type-todo" color="white" width="50" height="50" />
                                     </div>
 
 
                                     <div className="card__media">
-                                    <Icon className='Icon' icon="vscode-icons:file-type-todo" color="white" width="200" height="200" />
+                                        <Icon className='Icon' icon="vscode-icons:file-type-todo" color="white" width="200" height="200" />
                                     </div>
 
 
