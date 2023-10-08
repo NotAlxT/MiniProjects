@@ -8,6 +8,7 @@
     padding: 1rem;
 }
 .Timer h1{
+    display: flex;
     font-size: 6rem;
 }
 
@@ -17,11 +18,16 @@
     padding: 1rem;
 }
 
-.timer-status-0, .timer-status-1, .timer-status-2 {
-}
-
 .timer-button{
     padding: 1rem;
     margin: 1rem;
     
+}
+
+.code, .code a{
+    display: flex;
+    justify-content: center;
+    text-decoration: overline underline 2px;
+    text-transform: uppercase;
+    color: rgb(255, 0, 0);
 }

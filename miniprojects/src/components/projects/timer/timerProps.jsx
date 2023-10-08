@@ -3,7 +3,7 @@ import './timer.css'
 
 export default function TimerProps(props) {
     return (<>
-    <p> <a href="https://github.com/NotAlxT/MiniProjects/tree/main/miniprojects/src/components/projects/calculator" target="_blank" >Code</a></p>
+    <p className='code'> <a href="https://github.com/NotAlxT/MiniProjects/tree/main/miniprojects/src/components/projects/timer" target="_blank" >Code</a></p>
         <div className="Timer">
             <div className='timer-h'>{props.time.h >= 10 ? props.time.h : "0" + props.time.h}</div>
             <h1>:</h1>
