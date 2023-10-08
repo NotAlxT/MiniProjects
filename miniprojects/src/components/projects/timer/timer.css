@@ -1,0 +1,27 @@
+.Timer{
+    display: flex;
+    justify-content: center;
+}
+
+.timer-h, .timer-m, .timer-s, .timer-ms{
+    font-size: 10rem;
+    padding: 1rem;
+}
+.Timer h1{
+    font-size: 6rem;
+}
+
+.timer-buttons{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.timer-status-0, .timer-status-1, .timer-status-2 {
+}
+
+.timer-button{
+    padding: 1rem;
+    margin: 1rem;
+    
+}

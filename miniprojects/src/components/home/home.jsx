@@ -65,7 +65,7 @@ export default function Home() {
                         {/* TODO add img, add link, add design for box layout */}
                         <div className="container">
                             <article className="card">
-                                <a className="card__link" href="/calculator">
+                                <a className="card__link" href="/timer">
 
                                     <div className="card__icon">
                                         <Icon className='Icon' icon="ion:timer-outline" color="white" width="50" height="50" />
