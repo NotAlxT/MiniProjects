@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './timer.css'
 
 export default function TimerProps(props) {
-    return (<>
-    <p className='code'> <a href="https://github.com/NotAlxT/MiniProjects/tree/main/miniprojects/src/components/projects/timer" target="_blank" >Code</a></p>
+    return (<div>
+
         <div className="Timer">
             <div className='timer-h'>{props.time.h >= 10 ? props.time.h : "0" + props.time.h}</div>
             <h1>:</h1>
@@ -20,21 +20,25 @@ export default function TimerProps(props) {
                 }
             </div>
             <div className='timer-status-1'>
-                { (props.status === 1) ?
-                <div>
-                <button className='timer-button' onClick={props.stop}>stop</button> 
-                <button className='timer-button' onClick={props.reset}>reset</button>
-                </div>: ""
-            }
+                {(props.status === 1) ?
+                    <div>
+                        <button className='timer-button' onClick={props.stop}>stop</button>
+                        <button className='timer-button' onClick={props.reset}>reset</button>
+                    </div> : ""
+                }
             </div>
             <div className='timer-status-2'>
                 {(props.status === 2) ?
-                 <div>
-                    <button className='timer-button' onClick={props.resume}>resume</button>
-                    <button className='timer-button' onClick={props.reset}>reset</button> 
-                </div>: ""
+                    <div>
+                        <button className='timer-button' onClick={props.resume}>resume</button>
+                        <button className='timer-button' onClick={props.reset}>reset</button>
+                    </div> : ""
                 }
             </div>
         </div>
-    </>)
+        <div className='codeContainer'>
+            <p className='code'> <a className='codeAnchor' href="https://github.com/NotAlxT/MiniProjects/tree/main/miniprojects/src/components/projects/timer" target="_blank" rel='noreferrer' >Code</a></p>
+        </div>
+
+    </div>)
 }

@@ -11,6 +11,7 @@ export const ACTIONS = {
 }
 
 function reducer(state, { type, payload }) {
+  // eslint-disable-next-line
   switch (type) {
     case ACTIONS.ADD_DIGIT:
       if (state.overwrite) {
@@ -101,6 +102,7 @@ function evaluate({ currentOperand, previousOperand, operation }) {
   const current = parseFloat(currentOperand)
   if (isNaN(prev) || isNaN(current)) return ""
   let computation = ""
+  // eslint-disable-next-line
   switch (operation) {
     case "+":
       computation = prev + current
@@ -135,8 +137,9 @@ function Calculator() {
 
   return (
     <div>
-
-      <p className='code'> <a href="https://github.com/NotAlxT/MiniProjects/tree/main/miniprojects/src/components/projects/calculator" target="_blank" >Code</a></p>
+      <div className='codeContainer'>
+        <p className='code'> <a href="https://github.com/NotAlxT/MiniProjects/tree/main/miniprojects/src/components/projects/calculator" target="_blank" rel='noreferrer'>Code</a></p>
+      </div>
       <div className="calculator-container">
 
         <div className="calculator-grid">

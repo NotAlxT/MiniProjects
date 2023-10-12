@@ -94,7 +94,7 @@ export default function Home() {
                         {/* TODO add img, add link, add design for box layout */}
                         <div className="container">
                             <article className="card">
-                                <a className="card__link" href="/calculator">
+                                <a className="card__link" href="/todoList">
 
                                     <div className="card__icon">
                                         <Icon className='Icon' icon="vscode-icons:file-type-todo" color="white" width="50" height="50" />

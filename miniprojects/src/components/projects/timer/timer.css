@@ -24,10 +24,3 @@
     
 }
 
-.code, .code a{
-    display: flex;
-    justify-content: center;
-    text-decoration: overline underline 2px;
-    text-transform: uppercase;
-    color: rgb(255, 0, 0);
-}
